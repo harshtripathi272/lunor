@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="[INSERT YOUR APP SCREENSHOT OR LOGO HERE]" alt="Lunor Translator Screenshot" width="700"/>
+  <img src="logo.png" alt="Lunor Translator Screenshot" width="700"/>
 </p>
 
 <p align="center">
@@ -81,6 +81,7 @@ A key success of this project was demonstrating the application's powerful capab
 The project is organized with a clear separation between the frontend application and the backend scripts.
 
 
+
 nllb/
 ├── app/                  # The React/Tauri frontend application
 │   ├── components/
@@ -104,8 +105,112 @@ Follow these instructions to set up and run the application from the source code
 Ensure you have the following installed on your system:
 * **Python** (version 3.10 or higher)
 * **Node.js** (LTS version)
-* **Rust** (stable toolchain, installed via `rustup`)
 * **Git**
+* **Rust** (via `rustup`). If you don't have Rust, expand the guide below.
+<details>
+<summary><strong>🔥 Click here for the No-BS Rust Installation Guide (Windows, Mac, Linux)</strong></summary>
+
+---
+### 🖥️ Windows Guide (the easy way)
+
+1.  **Download and run `rustup-init.exe`:**
+    * Go to the official Rust website: [rust-lang.org](https://www.rust-lang.org/tools/install)
+    * Download the 64-bit installer and run it.
+
+2.  **Install the C++ tools when it asks:**
+    * The installer will probably say you need "Microsoft C++ Build Tools". Press `Enter` to let it install them for you. This is required for linking.
+
+3.  **Let it do its thing:**
+    * When it prompts you, just choose option `1` for the default installation.
+    * It will automatically update your PATH.
+
+4.  **Restart your terminal:**
+    * Close your current terminal (CMD, PowerShell, etc.) and open a new one for the PATH changes to take effect.
+
+5.  **✅ Verify it's working:**
+    ```bash
+    rustc --version
+    cargo --version
+    ```
+    If you see version numbers, you're good to go.
+
+6.  **🚫 If you see "command not found":**
+    * It means the installer failed to update your PATH. No biggie, we'll do it manually.
+    * Press the Windows key and search for "env".
+    * Click on "Edit the system environment variables".
+    * In the new window, click the "Environment Variables..." button.
+    * In the top box ("User variables"), find the `Path` variable and click "Edit...".
+    * Click "New" and paste in this exact line: `%USERPROFILE%\.cargo\bin`
+    * Click OK on all the windows to close them.
+    * **Restart your terminal** one more time. The commands should work now.
+
+---
+### 🍏 macOS Guide (M1/M2/M3 gang)
+
+1.  **Run the Rust installer:**
+    ```bash
+    curl --proto '=https' --tlsv1.2 -sSf [https://sh.rustup.rs](https://sh.rustup.rs) | sh
+    ```
+    * Choose option `1` (standard install) when prompted.
+
+2.  **Activate Rust for your current session:**
+    ```bash
+    source "$HOME/.cargo/env"
+    ```
+    ^ this makes it work *right now*.
+
+3.  **Permanently fix your PATH (so you don't have to run that `source` command every time):**
+    * Add this line to your `~/.zshrc` file (or `~/.bash_profile` if you use bash):
+        ```bash
+        export PATH="$HOME/.cargo/bin:$PATH"
+        ```
+    * Then, reload your shell config:
+        ```bash
+        source ~/.zshrc
+        ```
+
+4.  **✅ Verify it's working:**
+    ```bash
+    rustc --version
+    cargo --version
+    ```
+    If you see version numbers, you're g2g.
+
+---
+### 🐧 Linux Guide (Ubuntu/Debian/etc.)
+
+1.  **Run the Rust installer (same as Mac):**
+    ```bash
+    curl --proto '=https' --tlsv1.2 -sSf [https://sh.rustup.rs](https://sh.rustup.rs) | sh
+    ```
+    * Choose option `1` for the default installation.
+    * You might need to install `build-essential` first if you get errors: `sudo apt-get install build-essential`
+
+2.  **Activate Rust for your current session:**
+    ```bash
+    source "$HOME/.cargo/env"
+    ```
+
+3.  **Permanently fix your PATH:**
+    * The installer usually does this for you by adding a line to `~/.profile` or `~/.bashrc`.
+    * If it doesn't work after restarting your terminal, add this line to your `~/.bashrc` or `~/.zshrc`:
+        ```bash
+        export PATH="$HOME/.cargo/bin:$PATH"
+        ```
+    * Then, reload your shell config:
+        ```bash
+        source ~/.bashrc
+        ```
+
+4.  **✅ Verify it's working:**
+    ```bash
+    rustc --version
+    cargo --version
+    ```
+    If you see version numbers, you're set.
+
+</details>
+
 * **(Windows Only)** **WiX Toolset v3**: Required by Tauri to build the Windows installer (`.msi`). [Download the `wix314.exe` installer here](https://github.com/wixtoolset/wix3/releases/tag/wix3141rtm).
 
 ### Backend Setup
@@ -122,9 +227,14 @@ Ensure you have the following installed on your system:
     pip install -r requirements.txt
     ```
 4.  **Run the backend server:**
-    ```bash
-    python run_server.py
-    ```
+    * **Windows:**
+        ```bash
+        python run_server.py
+        ```
+    * **macOS / Linux:**
+        ```bash
+        python3 run_server.py
+        ```
     The server will start on `http://localhost:8000`. **Keep this terminal window open.**
 
 ### Frontend Setup
