@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="logo.png" alt="Lunor Translator Screenshot" width="700"/>
+  <img src="logo.png" alt="Lunor Translator Screenshot" width="100"/>
 </p>
 
 <p align="center">
