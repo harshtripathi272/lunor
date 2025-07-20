@@ -1,4 +1,7 @@
 # Lunor Translator 🔮
+<p align="center">
+  <img src="gui.png" alt="Lunor Translator Screenshot" width="500"/>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
@@ -111,7 +114,7 @@ Ensure you have the following installed on your system:
 
 A model should have these files 
 <p align="center">
-  <img src="model.png" alt="Lunor Translator Screenshot" width="100"/>
+  <img src="model.png" alt="Lunor Translator Screenshot" width="600"/>
 </p>
 
 **Note: Instead of `model.safetensors`, you can have `pytorch_model.bin`. Make sure names are correct as shown.**
