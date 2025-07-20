@@ -81,7 +81,7 @@ A key success of this project was demonstrating the application's powerful capab
 The project is organized with a clear separation between the frontend application and the backend scripts.
 
 
-
+```
 nllb/
 ├── app/                  # The React/Tauri frontend application
 │   ├── components/
@@ -95,7 +95,7 @@ nllb/
 
 
 ---
-
+```
 ## Installation and Usage
 
 Follow these instructions to set up and run the application from the source code.
