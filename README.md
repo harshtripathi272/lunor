@@ -107,8 +107,16 @@ Ensure you have the following installed on your system:
 * **Node.js** (LTS version)
 * **Git**
 * **Rust** (via `rustup`). If you don't have Rust, expand the guide below.
+* You can download a small **[NLLB-200 Distilled 600M](https://drive.google.com/file/d/1QFxUir2C1NSKYo_OApvQDNaowKijDj9P/view?usp=sharing)** model directly from here
+
+A model should have these files 
+<p align="center">
+  <img src="model.png" alt="Lunor Translator Screenshot" width="100"/>
+</p>
+
+**Note: Instead of `model.safetensors`, you can have `pytorch_model.bin`. Make sure names are correct as shown.**
 <details>
-<summary><strong>🔥 Click here for the No-BS Rust Installation Guide (Windows, Mac, Linux)</strong></summary>
+<summary><strong>🔥 Click here for the Rust Installation Guide (Windows, Mac, Linux)</strong></summary>
 
 ---
 ### 🖥️ Windows Guide (the easy way)
