@@ -1,6 +1,6 @@
 # Lunor Translator 🔮
 <p align="center">
-  <img src="gui.png" alt="Lunor Translator Screenshot" width="500"/>
+  <img src="gui.jpg" alt="Lunor Translator Screenshot" width="600"/>
 </p>
 
 <p align="center">
